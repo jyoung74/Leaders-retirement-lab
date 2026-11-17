@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#302017">
+  <meta name="description" content="리더스 은퇴설계 연구소 - 평생 벌었는데, 이제는 평생 쓸 계획이 필요합니다.">
+  <title>리더스 은퇴설계 연구소</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <a class="brand" href="#home">
+    <span class="brand-logo">LR</span>
+    <span class="brand-name">리더스 은퇴설계 연구소</span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+
+  <nav class="nav" id="mainNav">
+    <a href="#home">홈</a>
+    <a href="#diagnosis">은퇴 진단</a>
+    <a href="#services">서비스</a>
+    <a href="#insight">은퇴 인사이트</a>
+    <a class="nav-cta" href="#contact">상담 신청</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="eyebrow">LEADERS RETIREMENT INSTITUTE</span>
+      <h1>평생 벌었는데,<br>이제는 평생 쓸<br>계획이 필요합니다.</h1>
+      <p>은퇴 이후의 삶을 숫자로 진단하고<br>당신에게 맞는 노후의 방향을 설계합니다.</p>
+      <div class="hero-buttons">
+        <a href="#diagnosis" class="btn btn-gold">나의 은퇴 진단하기</a>
+        <a href="#services" class="btn btn-outline">서비스 알아보기</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="hero-circle circle-one"></div>
+      <div class="hero-circle circle-two"></div>
+      <div class="hero-line"></div>
+      <div class="hero-art-text">YOUR<br>RETIREMENT<br>YOUR LIFE</div>
+    </div>
+  </section>
+
+  <section class="quick-services" aria-label="주요 서비스">
+    <a href="#diagnosis"><span>01</span>은퇴 진단</a>
+    <a href="#services"><span>02</span>연금 설계</a>
+    <a href="#services"><span>03</span>자산 관리</a>
+    <a href="#services"><span>04</span>보험 점검</a>
+    <a href="#contact"><span>05</span>전문가 상담</a>
+  </section>
+
+  <section class="diagnosis-section section" id="diagnosis">
+    <div class="section-intro">
+      <span class="eyebrow">RETIREMENT CHECK</span>
+      <h2>나의 은퇴 준비,<br>얼마나 되어 있을까요?</h2>
+      <p>생활비와 연금, 금융자산을 입력하면<br>은퇴 후 필요한 자금과 부족액을 간이 진단합니다.</p>
+      <div class="intro-note">
+        <span>01</span>
+        <p>현재의 자산과 연금으로<br>은퇴 후 생활을 얼마나 유지할 수 있을까요?</p>
+      </div>
+    </div>
+
+    <div class="diagnosis-panel">
+      <div class="panel-heading">
+        <span class="eyebrow">MY RETIREMENT PLAN</span>
+        <h3>은퇴 준비 진단하기</h3>
+        <p>아래 항목을 입력해 주세요.</p>
+      </div>
+
+      <form id="diagnosisForm">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="retireAge">은퇴 희망 나이</label>
+            <select id="retireAge" required>
+              <option value="55">55세</option>
+              <option value="60" selected>60세</option>
+              <option value="65">65세</option>
+              <option value="70">70세</option>
+              <option value="75">75세</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="retirementYears">은퇴 후 필요 생활 기간</label>
+            <select id="retirementYears" required>
+              <option value="20">20년</option>
+              <option value="25">25년</option>
+              <option value="30" selected>30년</option>
+              <option value="35">35년</option>
+              <option value="40">40년</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="monthlyCost">월 예상 생활비</label>
+            <div class="input-unit">
+              <input id="monthlyCost" type="number" min="1" step="1" value="300" placeholder="예: 300" required>
+              <span>만원</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="nationalPension">국민연금 예상 월 수령액</label>
+            <div class="input-unit">
+              <input id="nationalPension" type="number" min="0" step="1" value="100" placeholder="예: 100">
+              <span>만원</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="personalPension">개인연금 예상 월 수령액</label>
+            <div class="input-unit">
+              <input id="personalPension" type="number" min="0" step="1" value="50" placeholder="예: 50">
+              <span>만원</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="financialAssets">보유 금융자산</label>
+            <div class="input-unit">
+              <input id="financialAssets" type="number" min="0" step="0.1" value="5" placeholder="예: 5">
+              <span>억원</span>
+            </div>
+          </div>
+
+          <div class="form-field full-field">
+            <label for="realEstate">보유 부동산 자산</label>
+            <div class="input-unit">
+              <input id="realEstate" type="number" min="0" step="0.1" value="0" placeholder="예: 8">
+              <span>억원</span>
+            </div>
+            <small>부동산은 별도 표시하며, 매각·임대 수입은 계산에 자동 반영하지 않습니다.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold submit-btn">은퇴 준비 수준 확인하기</button>
+      </form>
+
+      <div id="diagnosisResult" class="diagnosis-result" aria-live="polite" hidden></div>
+      <p class="privacy-note">입력한 값은 이 화면에서 계산에만 사용됩니다.</p>
+    </div>
+  </section>
+
+  <section class="services-section section" id="services">
+    <div class="section-title">
+      <span class="eyebrow">OUR SERVICES</span>
+      <h2>은퇴 준비의 모든 것</h2>
+      <p>막연한 노후 준비가 아닌, 실행 가능한 은퇴 전략을 제안합니다.</p>
+    </div>
+
+    <div class="service-grid">
+      <a class="service-card image-retirement" href="#diagnosis">
+        <div class="card-overlay"></div>
+        <div class="card-content"><span>01</span><h3>은퇴 설계</h3><p>은퇴 후 현금흐름과 생활비 진단</p></div>
+      </a>
+      <a class="service-card image-pension" href="#contact">
+        <div class="card-overlay"></div>
+        <div class="card-content"><span>02</span><h3>연금 설계</h3><p>국민·퇴직·개인연금 점검</p></div>
+      </a>
+      <a class="service-card image-invest" href="#contact">
+        <div class="card-overlay"></div>
+        <div class="card-content"><span>03</span><h3>자산 관리</h3><p>은퇴자산의 운용과 인출 전략</p></div>
+      </a>
+      <a class="service-card image-insurance" href="#contact">
+        <div class="card-overlay"></div>
+        <div class="card-content"><span>04</span><h3>보험 점검</h3><p>노후 의료비와 보장 분석</p></div>
+      </a>
+      <a class="service-card image-tax" href="#contact">
+        <div class="card-overlay"></div>
+        <div class="card-content"><span>05</span><h3>세금·상속</h3><p>절세와 자산 이전 전략</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="insight-section section" id="insight">
+    <div class="section-title">
+      <span class="eyebrow">RETIREMENT INSIGHT</span>
+      <h2>은퇴를 위한 금융 인사이트</h2>
+      <p>알아두면 도움이 되는 연금과 자산관리 정보</p>
+    </div>
+    <div class="insight-box">
+      <span class="insight-number">LEADERS NOTE</span>
+      <h3>은퇴 준비는 자산의 크기보다<br>현금흐름의 설계가 중요합니다.</h3>
+      <p>얼마를 모았는지뿐 아니라, 매월 얼마를 만들고 어떻게 사용할 것인지가 중요합니다.</p>
+      <a href="#diagnosis" class="text-link">나의 은퇴 준비 확인하기 →</a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div>
+      <span class="eyebrow">LET'S PLAN YOUR FUTURE</span>
+      <h2>당신의 노후,<br>함께 설계하겠습니다.</h2>
+      <p>막연한 걱정을 구체적인 계획으로 바꾸는 시간.</p>
+    </div>
+    <a href="#diagnosis" class="btn btn-gold">은퇴 준비 진단하기</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">LR · 리더스 은퇴설계 연구소</div>
+  <p>평생 벌었는데, 이제는 평생 쓸 계획이 필요합니다.</p>
+  <small>본 홈페이지의 간이 진단은 참고용이며 투자·세무·법률 자문을 대신하지 않습니다.</small>
+  <small>© <span id="currentYear"></span> Leaders Retirement Institute. All rights reserved.</small>
+</footer>
+
+</body>
+</html>
