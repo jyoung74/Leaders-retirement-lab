@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10243a">
+  <meta name="description" content="리더스 은퇴 연구소 - 당신의 은퇴 이후 30년을 준비합니다.">
+  <title>리더스 은퇴 연구소 | 은퇴설계</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">L</span><span>리더스 은퇴 연구소<small>RETIREMENT PLANNING</small></span></a>
+    <button class="menu-button" id="menuButton" aria-label="메뉴 열기">☰</button>
+    <nav id="nav">
+      <a href="#diagnosis">은퇴 진단</a><a href="#calculator">계산기</a><a href="#services">서비스</a><a href="#contact">상담 문의</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">RETIREMENT, REIMAGINED</p>
+        <h1>평생 벌었는데,<br><em>평생 쓸 수 있을까?</em></h1>
+        <p class="hero-copy">막연한 노후 걱정을 숫자로 확인하고,<br>지금부터 준비할 수 있는 은퇴설계를 시작하세요.</p>
+        <a class="button button-gold" href="#calculator">나의 은퇴자금 계산하기 <span>→</span></a>
+        <p class="hero-note">당신의 은퇴 이후 30년을 함께 설계합니다.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="art-card"><span>RETIREMENT PLAN</span><strong>내일을 위한<br>오늘의 설계</strong><i>YOUR NEXT CHAPTER</i></div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><strong>3층 연금</strong><span>국민 · 퇴직 · 개인연금</span></div>
+      <div><strong>은퇴 현금흐름</strong><span>월 생활비와 소득 분석</span></div>
+      <div><strong>실행 가능한 계획</strong><span>부족 자금과 준비 전략</span></div>
+    </section>
+
+    <section class="section" id="diagnosis">
+      <div class="section-heading"><p class="eyebrow">START WITH YOUR NUMBERS</p><h2>은퇴 준비, 어디까지 왔을까요?</h2><p>복잡한 금융 용어보다 중요한 것은 내 상황을 정확히 아는 것입니다.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">₩</div><h3>은퇴자금 진단</h3><p>은퇴 후 필요한 생활비와 준비된 자금을 비교합니다.</p></article>
+        <article class="feature-card"><div class="feature-icon">▥</div><h3>3층 연금 점검</h3><p>국민연금·퇴직연금·개인연금의 현금흐름을 살펴봅니다.</p></article>
+        <article class="feature-card"><div class="feature-icon">↗</div><h3>자산 활용 전략</h3><p>보유 자산을 은퇴 이후 소득으로 연결하는 방법을 고민합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+      <div class="section-heading light"><p class="eyebrow">RETIREMENT CALCULATOR</p><h2>나의 은퇴자금 간편 계산</h2><p>아래 금액을 입력하면 은퇴 후 예상 자금 부족액을 계산합니다.</p></div>
+      <div class="calculator">
+        <div class="form-grid">
+          <label>현재 나이 <span class="input-wrap"><input id="age" type="number" min="18" max="100" value="55"><b>세</b></span></label>
+          <label>은퇴 예정 나이 <span class="input-wrap"><input id="retireAge" type="number" min="18" max="100" value="60"><b>세</b></span></label>
+          <label>은퇴 후 월 생활비 <span class="input-wrap"><input id="monthlyCost" type="number" min="0" value="300"><b>만원</b></span></label>
+          <label>월 연금 수령액 합계 <span class="input-wrap"><input id="monthlyPension" type="number" min="0" value="180"><b>만원</b></span></label>
+          <label>은퇴 준비 금융자산 <span class="input-wrap"><input id="assets" type="number" min="0" value="20000"><b>만원</b></span></label>
+          <label>은퇴 기간 <span class="input-wrap"><input id="years" type="number" min="1" max="60" value="30"><b>년</b></span></label>
+        </div>
+        <button class="button button-gold calculate-button" id="calculate">결과 확인하기</button>
+        <div class="result" id="result" aria-live="polite">
+          <p>월 예상 부족액</p><strong id="monthlyGap">120<span>만원</span></strong>
+          <div class="result-divider"></div>
+          <p>은퇴기간 동안 필요한 부족 자금(단순 합산)</p><strong id="totalGap">4억 3,200만원</strong>
+          <small>※ 물가상승률·운용수익률·세금·연금 수령 시점은 반영하지 않은 단순 참고 계산입니다.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading"><p class="eyebrow">OUR SERVICES</p><h2>숫자에서 전략으로</h2><p>은퇴 준비의 각 단계를 체계적으로 점검합니다.</p></div>
+      <div class="service-list">
+        <div><span>01</span><section><h3>은퇴 현금흐름 분석</h3><p>은퇴 후 월 지출과 연금·기타 소득을 분석합니다.</p></section><b>→</b></div>
+        <div><span>02</span><section><h3>연금 포트폴리오 점검</h3><p>공적연금과 퇴직연금, 개인연금의 역할을 살펴봅니다.</p></section><b>→</b></div>
+        <div><span>03</span><section><h3>노후 위험 대비</h3><p>의료비, 장수 위험, 가족 상황 등 변수를 점검합니다.</p></section><b>→</b></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">LET'S PLAN YOUR FUTURE</p><h2>나의 노후를<br>숫자로 점검해 보세요.</h2>
+      <p>상담 신청 기능은 운영자의 연락처와 개인정보 처리방침을 확정한 뒤 연결할 수 있습니다.</p>
+      <a class="button button-outline" href="mailto:hello@example.com?subject=%EB%A6%AC%EB%8D%94%EC%8A%A4%20%EC%9D%80%ED%87%B4%20%EC%97%B0%EA%B5%AC%EC%86%8C%20%EC%83%81%EB%8B%B4%20%EB%AC%B8%EC%9D%98">이메일로 문의하기</a>
+      <small>현재 예시 이메일 주소입니다. 실제 운영 전 반드시 변경하세요.</small>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">L</span><span>리더스 은퇴 연구소<small>RETIREMENT PLANNING</small></span></a><p>본 홈페이지의 계산 결과는 교육·정보 제공을 위한 참고 자료이며, 투자·세무·보험 관련 개별 자문을 대체하지 않습니다.</p><small>© <span id="year"></span> LEADERS RETIREMENT LAB. ALL RIGHTS RESERVED.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
